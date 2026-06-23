@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reborn Through Him — Storyboard</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #0d0d0d;
+    color: #f0f0f0;
+    padding: 40px 60px;
+  }
+
+  .container { max-width: 1300px; margin: 0 auto; }
+
+  .title-slide {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 2px solid #2a2a2a;
+    margin-bottom: 60px;
+  }
+
+  .title-slide h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #d4a84b, #8b6914);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .title-slide .sub {
+    font-size: 1.3rem;
+    color: #888;
+    margin-top: 16px;
+    font-weight: 400;
+  }
+
+  .title-slide .meta {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 30px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .cast-block {
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cast-item { text-align: center; }
+  .cast-item .name { font-weight: 700; font-size: 1rem; color: #d4a84b; }
+  .cast-item .desc { font-size: 0.8rem; color: #777; margin-top: 4px; }
+
+  .beat {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #222;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .beat-images {
+    flex: 0 0 58%;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .beat-images img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    transition: transform 0.2s;
+  }
+  .beat-images img:hover { transform: scale(1.02); }
+
+  .beat-images .img-grid-1 img { max-height: 420px; }
+
+  .beat-images .img-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .beat-images .img-grid-2 img {
+    max-height: 300px;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .beat-images .img-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .beat-images .img-grid-3 img {
+    max-height: 220px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .beat-info { flex: 1; padding-top: 4px; }
+
+  .beat-number {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #d4a84b;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+
+  .beat-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    line-height: 1.1;
+  }
+
+  .beat-time {
+    font-size: 0.85rem;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #d4a84b;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 18px;
+    margin-bottom: 4px;
+  }
+
+  .direction {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #ccc;
+  }
+
+  .dialogue {
+    margin-top: 18px;
+    padding: 12px 16px;
+    background: #1a1a1a;
+    border-left: 3px solid #d4a84b;
+    border-radius: 6px;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #e0e0e0;
+  }
+
+  .dialogue .speaker {
+    font-style: normal;
+    font-weight: 700;
+    color: #d4a84b;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #444;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    border-top: 1px solid #222;
+    margin-top: 20px;
+  }
+
+  .footer strong { color: #d4a84b; }
+
+  @media print {
+    body { background: #fff; color: #111; padding: 20px; }
+    .title-slide h1 { -webkit-text-fill-color: #8b6914; }
+    .cast-item .name, .label, .beat-number, .dialogue .speaker, .footer strong { color: #8b6914; }
+    .dialogue { background: #f5f5f5; border-left-color: #8b6914; }
+    .beat { border-bottom-color: #ddd; }
+    .footer, .beat-time, .title-slide .meta { color: #888; }
+    .direction, .beat-title { color: #111; }
+    .dialogue { color: #333; }
+    .beat { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- TITLE SLIDE -->
+  <div class="title-slide">
+    <h1>REBORN<br>THROUGH HIM</h1>
+    <p class="sub">Brand Film — Storyboard</p>
+    <p class="meta">Runtime: ~45s &nbsp;|&nbsp; Format: Vertical (IG Reels / TikTok) &nbsp;|&nbsp; Location: St Anne's Park</p>
+    <div class="cast-block">
+      <div class="cast-item">
+        <p class="name">DANIEL</p>
+        <p class="desc">Lead. The one who chooses faith.</p>
+      </div>
+      <div class="cast-item">
+        <p class="name">FRIEND 2</p>
+        <p class="desc">Supporting. Part of the group.</p>
+      </div>
+      <div class="cast-item">
+        <p class="name">FRIEND 3</p>
+        <p class="desc">Supporting. Part of the group.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 1 -->
+  <div class="beat">
+    <div class="beat-images">
+      <div class="img-grid-1">
+        <img src="Scene 1/1.jpg" alt="Scene 1">
+      </div>
+    </div>
+    <div class="beat-info">
+      <p class="beat-number">SCENE 1</p>
+      <h2 class="beat-title">Walk &amp; Sit</h2>
+      <p class="beat-time">00:00 – 00:05</p>
+
+      <p class="label">Direction</p>
+      <p class="direction">3 friends walking through the park, easy energy. They reach a bench and sit. A laugh, a shove, someone glancing at their phone. Establishes the group as a unit before the split happens.</p>
+      <p class="direction" style="margin-top: 8px; color: #999;">Wide-ish tracking shot as they walk in, settle on the bench. Keep this fast: it's setup, not story.</p>
+
+      <div class="dialogue">
+        <span class="speaker">No dialogue</span> — body language and energy carry it.
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 2 -->
+  <div class="beat">
+    <div class="beat-images">
+      <div class="img-grid-1">
+        <img src="Scene 2/1.jpg" alt="Scene 2">
+      </div>
+    </div>
+    <div class="beat-info">
+      <p class="beat-number">SCENE 2</p>
+      <h2 class="beat-title">The Conversation Turns</h2>
+      <p class="beat-time">00:05 – 00:16</p>
+
+      <p class="label">Direction</p>
+      <p class="direction">Daniel's last line lands flat and certain — not defensive, not a joke. That stillness after it is the beat. Camera tightens slowly on his face as the friends' voices start to drop under the push-in into Scene 3.</p>
+
+      <div class="dialogue">
+        <span class="speaker">FRIEND 2:</span> "You guys still coming to the party tonight, yeah?"<br>
+        <span class="speaker">FRIEND 3:</span> "Of course bro, I can't wait."<br>
+        <span class="speaker">DANIEL:</span> "Nah, I'm going to read my Bible tonight. I've got church in the morning."<br>
+        <span class="speaker">FRIEND 3:</span> "Bro, what happened to the old fun you?"<br>
+        <span class="speaker">FRIEND 2:</span> "What's next, you're gonna start a Christian clothing brand in Ireland?"<br>
+        <span class="speaker">DANIEL:</span> "Yeah. That's what I want to do."
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 3 -->
+  <div class="beat">
+    <div class="beat-images">
+      <div class="img-grid-3">
+        <img src="Scene 3/1.jpg" alt="Scene 3 frame 1">
+        <img src="Scene 3/2.jpg" alt="Scene 3 frame 2">
+        <img src="Scene 3/3.jpg" alt="Scene 3 frame 3">
+      </div>
+    </div>
+    <div class="beat-info">
+      <p class="beat-number">SCENE 3</p>
+      <h2 class="beat-title">VFX Beat: The Blink</h2>
+      <p class="beat-time">00:16 – 00:28</p>
+
+      <p class="label">Direction</p>
+      <p class="direction">Camera close on Daniel's face. He blinks. Friends are gone. He's alone on the bench. Light has dropped. Beat of stillness: no dialogue.</p>
+      <p class="direction" style="margin-top: 8px; color: #999;">The bench dips slightly beside him. A soft golden light appears — contained, warm, weight without form. Human-adjacent but never resolved. One dove flies past in 3D VFX; the light follows the direction the dove flew. He blinks again: back — friends still there, still talking, like no time has passed.</p>
+      <p class="direction" style="margin-top: 8px; color: #888;">No dialogue in this whole sequence. Sound design carries it: ambient park noise drops out almost completely, comes back with the blink-back.</p>
+
+      <div class="dialogue">
+        <span class="speaker">No dialogue</span> — entirely visual. Sound design carries it.
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 4 -->
+  <div class="beat">
+    <div class="beat-images">
+      <div class="img-grid-2">
+        <img src="Scene 4/1.jpg" alt="Scene 4 frame 1">
+        <img src="Scene 4/2.jpg" alt="Scene 4 frame 2">
+      </div>
+    </div>
+    <div class="beat-info">
+      <p class="beat-number">SCENE 4</p>
+      <h2 class="beat-title">The Group Leaves</h2>
+      <p class="beat-time">00:28 – 00:38</p>
+
+      <p class="label">Direction</p>
+      <p class="direction">Group gets up to head off. A look back at Daniel: half a question, no words needed. Group walks off. Daniel starts to rise to follow, out of habit. Flash-cut, half a second: the golden light beside him on the bench. He stops.</p>
+      <p class="direction" style="margin-top: 8px; color: #999;">One line is enough. The flashback interrupting his instinct to follow is the real beat — keep it quick, don't let it drag.</p>
+
+      <div class="dialogue">
+        <span class="speaker">FRIEND 2:</span> "Come on, let's go."
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENE 5 -->
+  <div class="beat">
+    <div class="beat-images">
+      <div class="img-grid-2">
+        <img src="Scene 5/1.jpg" alt="Scene 5 frame 1">
+        <img src="Scene 5/2.jpg" alt="Scene 5 frame 2">
+      </div>
+    </div>
+    <div class="beat-info">
+      <p class="beat-number">SCENE 5</p>
+      <h2 class="beat-title">The Turn</h2>
+      <p class="beat-time">00:38 – 00:45</p>
+
+      <p class="label">Direction</p>
+      <p class="direction">Daniel turns the other way: the direction the light followed the dove. Walks off alone, settled, not sad. Friends continue on in the background, oblivious. Outro music comes in here — carries through to the end card.</p>
+
+      <div class="dialogue">
+        <span class="speaker">No dialogue</span> — Outro music carries through to end card.
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <strong>REBORN THROUGH HIM</strong> &nbsp;·&nbsp; Coming Soon<br>
+    "Even if your friends are against you, put all your faith in the Lord. Be bold in your faith."
+  </div>
+
+</div>
+</body>
+</html>
